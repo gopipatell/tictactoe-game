@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/tictactoe-jquery.js"></script>
+  <script src="js/tictactoe.js"></script>
+  <title>Let's Play Tic Tac Toe</title>
+</head>
+
+<body>
+  <div id="page1">
+    <h2>Let's play Tic Tac Toe 🎭 </h2>
+    <p>Select the player</p>
+    <button type="button">1 PLAYER GAME</button>
+    <button type="button" onclick="showPage(2)"> 2 PLAYERS GAME </button>
+  </div>
+
+
+  <div id="page2">
+    <h2>Enter Player's Name</h2>
+    <p>1st Players Name</p><input class="input-player1" type="text" value="Player 1">
+    <p>2nd Players Name</p><input class="input-player2" type="text" value="Player 2"><br><br>
+    <button type="button" onclick="showPage(1)">BACK</button>
+    <button type="button" onclick="setPlayerName()">PLAY!</button>
+  </div>
+
+
+  <div id="page3">
+    <div>
+      <div class="result">
+        <h3 class="result_msg">Player1 wins</h3>
+        <button type="button">PLAY AGAIN</button>
+        <button type="button" onclick="showPage(1)">EXIT</button>
+      </div>
+      <div class="score">
+        <h4>Score</h4>
+        <p><span class="player1name"></span> x <span class="score1">0</span> </p>
+        <p><span class="player2name"></span> x <span class="score2">0</span> </p>
+      </div>
+    </div>
+    <div id="board">
+      <table style="width:50%">
+        <tr>
+          <td id="one"></td>
+          <td id="two">&nbsp;</td>
+          <td id="three">&nbsp;</td>
+        </tr>
+        <tr>
+          <td id="four">&nbsp;</td>
+          <td id="five"></td>
+          <td id="six"></td>
+        </tr>
+        <tr>
+          <td id="seven">&nbsp;</td>
+          <td id="eight">&nbsp;</td>
+          <td id="nine"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

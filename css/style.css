@@ -1,0 +1,105 @@
+body {
+  background-image: url("tic-tac-toe.jpg");
+  font-size: 25px;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+table td{
+  border: 3px solid black;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 100px;
+  min-width: 100px;
+}
+#board {
+  margin: 0 auto;
+  width: 524px;
+}
+#one {
+  border-top: 0;
+  border-left: 0;
+}
+#two {
+  border-top: 0;
+}
+#three {
+  border-right:0;
+  border-top: 0;
+  }
+#four {
+    border-left: 0;
+  }
+#six {
+  border-right: 0;
+}
+#seven {
+  border-left: 0;
+  border-bottom: 0;
+}
+#eight {
+  border-bottom: 0;
+}
+#nine {
+  border-right: 0;
+  border-bottom: 0;
+}
+/* h1 {
+  text-align: center;
+  color: #08080878;
+  font-style: italic;
+  font-size: 70px;
+} */
+
+button{
+  color: #fbf5f5;
+  padding: 5px 5px;
+  background-color: #8c8080;
+  font-size: 30px;
+}
+#page1{
+  /* background-color: white; */
+  width: 500px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 150px auto;
+  display:none;
+}
+button {
+  margin: 10px;
+  padding: 5px 20px;
+
+}
+#page3 {
+  display:none;
+}
+#page2 {
+  width: 400px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 150px auto;
+  display: none;
+}
+input {
+  font-size: 20px;
+  /* margin-top: 5px; */
+  padding: 5px;
+  /* display:none; */
+}
+p {
+  margin: 10px;
+}
+div.result {
+text-align: center;
+width: 400px;
+position: absolute;
+left: 500px;
+top: 0px;
+display:none;
+
+}
+
+div.score {
+  margin-left: 10px;
+  text-align: center;
+  width: 200px;
+}
