@@ -110,7 +110,9 @@ $("#play").on("click", setPlayerName);
 
 $("#exit").on("click", exit);
 
-// $("#goback").on("click", showPage(2));
+$("#goback").on("click", function(){
+    showPage(1);
+});
 
  $("td").on("click", playGame);
 
