@@ -6,14 +6,14 @@
  */
 const win = function(board) {
 
-  if ((board.includes("one") && board.includes("two") && board.includes("three")) ||
-    (board.includes("four") && board.includes("five") && board.includes("six")) ||
-    (board.includes("one") && board.includes("four") && board.includes("seven")) ||
-    (board.includes("two") && board.includes("five") && board.includes("eight")) ||
-    (board.includes("three") && board.includes("six") && board.includes("nine")) ||
-    (board.includes("three") && board.includes("five") && board.includes("seven")) ||
-    (board.includes("one") && board.includes("five") && board.includes("nine")) ||
-    (board.includes("seven") && board.includes("eight") && board.includes("nine"))) {
+  if ((board.includes("c1") && board.includes("c2") && board.includes("c3")) && highlight("#c1, #c2, #c3") ||
+    (board.includes("c4") && board.includes("c5") && board.includes("c6")) && highlight("#c4, #c5, #c6") ||
+    (board.includes("c1") && board.includes("c4") && board.includes("c7")) && highlight("#c1, #c4, #c7") ||
+    (board.includes("c2") && board.includes("c5") && board.includes("eight")) && highlight("#c2, #c5, #eight") ||
+    (board.includes("c3") && board.includes("c6") && board.includes("c9")) && highlight("#c3, #c6, #c9") ||
+    (board.includes("c3") && board.includes("c5") && board.includes("c7")) && highlight("#c3, #c5, #c7") ||
+    (board.includes("c1") && board.includes("c5") && board.includes("c9")) && highlight("#c1, #c5, #c9") ||
+    (board.includes("c7") && board.includes("eight") && board.includes("c9") && highlight("#c7, #eight, #c9")) ) {
     return true;
   } else {
     return false;

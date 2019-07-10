@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,24 +10,30 @@
   <script src="js/jquery.js"></script>
   <script src="js/tictactoe-jquery.js"></script>
   <script src="js/tictactoe.js"></script>
-  <title>Let's Play Tic Tac Toe</title>
+
+
+  <title>Tic Tac Toe</title>
 </head>
 
 <body>
   <div id="page1">
+    <h1>TIC TAC TOE</h1>
     <h2>Let's play Tic Tac Toe 🎭 </h2>
     <p>Select the player</p>
     <button type="button">1 PLAYER GAME</button>
-    <button type="button" onclick="showPage(2)"> 2 PLAYERS GAME </button>
+    <button id="twoplayers" type="button"> 2 PLAYERS GAME </button>
   </div>
 
 
   <div id="page2">
     <h2>Enter Player's Name</h2>
-    <p>1st Players Name</p><input class="input-player1" type="text" value="Player 1">
-    <p>2nd Players Name</p><input class="input-player2" type="text" value="Player 2"><br><br>
-    <button type="button" onclick="showPage(1)">BACK</button>
-    <button type="button" onclick="setPlayerName()">PLAY!</button>
+    <p>1st Players Name</p>
+    <input class="input-player1" type="text" value="Player 1">
+    <p>2nd Players Name</p>
+    <input class="input-player2" type="text" value="Player 2">
+    <br><br>
+    <button id="goback" type="button">BACK</button>
+    <button id="play" type="button">PLAY!</button>
   </div>
 
 
@@ -34,31 +41,32 @@
     <div>
       <div class="result">
         <h3 class="result_msg">Player1 wins</h3>
-        <button type="button">PLAY AGAIN</button>
-        <button type="button" onclick="showPage(1)">EXIT</button>
+        <button id="reset" type="button">PLAY AGAIN</button>
+        <button id="exit" type="button">EXIT</button>
+        <!-- onclick="showPage(1)" -->
       </div>
       <div class="score">
         <h4>Score</h4>
-        <p><span class="player1name"></span> x <span class="score1">0</span> </p>
-        <p><span class="player2name"></span> x <span class="score2">0</span> </p>
+        <p><span class="playerturn player1turn">🎲</span><span class="player1name"></span>: <span class="score1">0</span> </p>
+        <p><span class="playerturn player2turn">🎲</span><span class="player2name"></span>: <span class="score2">0</span> </p>
       </div>
     </div>
     <div id="board">
       <table style="width:50%">
         <tr>
-          <td id="one"></td>
-          <td id="two">&nbsp;</td>
-          <td id="three">&nbsp;</td>
+          <td id="c1">&nbsp;</td>
+          <td id="c2">&nbsp;</td>
+          <td id="c3">&nbsp;</td>
         </tr>
         <tr>
-          <td id="four">&nbsp;</td>
-          <td id="five"></td>
-          <td id="six"></td>
+          <td id="c4">&nbsp;</td>
+          <td id="c5">&nbsp;</td>
+          <td id="c6">&nbsp;</td>
         </tr>
         <tr>
-          <td id="seven">&nbsp;</td>
-          <td id="eight">&nbsp;</td>
-          <td id="nine"></td>
+          <td id="c7">&nbsp;</td>
+          <td id="c8">&nbsp;</td>
+          <td id="c9">&nbsp;</td>
         </tr>
       </table>
     </div>

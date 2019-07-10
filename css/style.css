@@ -10,36 +10,43 @@ table td{
   text-align: center;
   font-size: 100px;
   min-width: 100px;
+  min-height: 100px;
 }
+
+td {
+  width: 100px;
+  height: 100px;
+}
+
 #board {
   margin: 0 auto;
   width: 524px;
 }
-#one {
+#c1 {
   border-top: 0;
   border-left: 0;
 }
-#two {
+#c2 {
   border-top: 0;
 }
-#three {
+#c3 {
   border-right:0;
   border-top: 0;
   }
-#four {
+#c4 {
     border-left: 0;
   }
-#six {
+#c6 {
   border-right: 0;
 }
-#seven {
+#c7 {
   border-left: 0;
   border-bottom: 0;
 }
-#eight {
+#c8 {
   border-bottom: 0;
 }
-#nine {
+#c9 {
   border-right: 0;
   border-bottom: 0;
 }
@@ -56,22 +63,24 @@ button{
   background-color: #8c8080;
   font-size: 30px;
 }
+
 #page1{
   /* background-color: white; */
   width: 500px;
   padding-bottom: 10px;
   text-align: center;
   margin: 150px auto;
-  display:none;
 }
+
 button {
   margin: 10px;
   padding: 5px 20px;
+}
 
-}
 #page3 {
-  display:none;
+  display: none;
 }
+
 #page2 {
   width: 400px;
   padding-bottom: 10px;
@@ -83,7 +92,7 @@ input {
   font-size: 20px;
   /* margin-top: 5px; */
   padding: 5px;
-  /* display:none; */
+
 }
 p {
   margin: 10px;
@@ -95,11 +104,30 @@ position: absolute;
 left: 500px;
 top: 0px;
 display:none;
-
+}
+iframe {
+  width:300px;
+  height:300px;
 }
 
 div.score {
   margin-left: 10px;
-  text-align: center;
+  text-align: left;
   width: 200px;
+}
+
+span.playerturn {
+  display: inline-block;
+  margin-right: 5px;
+  width: 30px;
+}
+span.player2turn {
+  visibility: hidden;
+}
+
+td:hover{
+  background-color: #0c0b0b2e;
+}
+div.score h4 {
+  margin: 25px 0 0 50px;
 }
