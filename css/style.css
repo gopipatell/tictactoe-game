@@ -2,9 +2,13 @@ body {
   background-image: url("tic-tac-toe.jpg");
   font-size: 25px;
   font-family: 'Maven Pro', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* width:100%;
+  Height:100%; */
 }
 
-table td{
+table td {
   border: 3px solid black;
   padding: 10px 30px;
   text-align: center;
@@ -22,49 +26,57 @@ td {
   margin: 0 auto;
   width: 524px;
 }
+
 #c1 {
   border-top: 0;
   border-left: 0;
 }
+
 #c2 {
   border-top: 0;
 }
+
 #c3 {
-  border-right:0;
+  border-right: 0;
   border-top: 0;
-  }
+}
+
 #c4 {
-    border-left: 0;
-  }
+  border-left: 0;
+}
+
 #c6 {
   border-right: 0;
 }
+
 #c7 {
   border-left: 0;
   border-bottom: 0;
 }
+
 #c8 {
   border-bottom: 0;
 }
+
 #c9 {
   border-right: 0;
   border-bottom: 0;
 }
+
 /* h1 {
   text-align: center;
   color: #08080878;
   font-style: italic;
   font-size: 70px;
 } */
-
-button{
+button {
   color: #fbf5f5;
   padding: 5px 5px;
   background-color: #8c8080;
   font-size: 30px;
 }
 
-#page1{
+#page1 {
   /* background-color: white; */
   width: 500px;
   padding-bottom: 10px;
@@ -77,8 +89,15 @@ button {
   padding: 5px 20px;
 }
 
-#page3 {
+#page4 {
   display: none;
+}
+
+#page3 {
+  width: 500px;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 150px auto;
 }
 
 #page2 {
@@ -88,26 +107,32 @@ button {
   margin: 150px auto;
   display: none;
 }
+
 input {
   font-size: 20px;
   /* margin-top: 5px; */
   padding: 5px;
-
 }
+
 p {
   margin: 10px;
 }
+
 div.result {
-text-align: center;
-width: 400px;
-position: absolute;
-left: 500px;
-top: 0px;
-display:none;
+  text-align: center;
+  width: 400px;
+  position: absolute;
+  left: 0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0px;
+  display: none;
 }
+
 iframe {
-  width:300px;
-  height:300px;
+  width: 300px;
+  height: 300px;
 }
 
 div.score {
@@ -121,13 +146,34 @@ span.playerturn {
   margin-right: 5px;
   width: 30px;
 }
+
 span.player2turn {
   visibility: hidden;
 }
 
-td:hover{
+td:hover {
   background-color: #0c0b0b2e;
 }
+
 div.score h4 {
   margin: 25px 0 0 50px;
+}
+
+input[type=radio] {
+  display: none;
+  margin: 10px;
+}
+
+input[type=radio]+label {
+  display: inline-block;
+  margin: -2px;
+  padding: 4px 20px;
+  border:1px solid #ddd;
+
+}
+
+input[type=radio]:checked+label {
+  background-image: none;
+  color: #fbf5f5;
+  background-color: #8c8080;
 }

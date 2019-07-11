@@ -19,11 +19,10 @@
   <div id="page1">
     <h1>TIC TAC TOE</h1>
     <h2>Let's play Tic Tac Toe 🎭 </h2>
-    <p>Select the player</p>
-    <button type="button">1 PLAYER GAME</button>
+    <p>Select the game</p>
+    <button id="oneplayer" type="button">1 PLAYER GAME</button>
     <button id="twoplayers" type="button"> 2 PLAYERS GAME </button>
   </div>
-
 
   <div id="page2">
     <h2>Enter Player's Name</h2>
@@ -32,23 +31,35 @@
     <p>2nd Players Name</p>
     <input class="input-player2" type="text" value="Player 2">
     <br><br>
-    <button id="goback" type="button">BACK</button>
+    <button class="goback" type="button">BACK</button>
     <button id="play" type="button">PLAY!</button>
   </div>
 
-
   <div id="page3">
+    <h2>Player vs AI</h2>
+    <p>Enter player name</p>
+    <input class="input-player" type="text" name="" value="Player">
+    <p>Choose the symbol</p>
+    <input id="sym1" type="radio" name="symbol" value="X" checked="checked"> <label for="sym1">X</label>
+
+    <input id="sym2" type="radio" name="symbol" value="O"><label for="sym2">O</label>
+    <br><br>
+    <button class="goback" type="button" name="button">BACK</button>
+    <button id="play1" type="button" name="button">PLAY!</button>
+
+  </div>
+
+  <div id="page4">
     <div>
       <div class="result">
         <h3 class="result_msg">Player1 wins</h3>
         <button id="reset" type="button">PLAY AGAIN</button>
         <button id="exit" type="button">EXIT</button>
-        <!-- onclick="showPage(1)" -->
       </div>
       <div class="score">
         <h4>Score</h4>
-        <p><span class="playerturn player1turn">🎲</span><span class="player1name"></span> :  <span class="score1">0</span> </p>
-        <p><span class="playerturn player2turn">🎲</span><span class="player2name"></span> :  <span class="score2">0</span> </p>
+        <p><span class="playerturn player1turn">🎲</span><span class="player1name"></span> : <span class="score1">0</span> </p>
+        <p><span class="playerturn player2turn">🎲</span><span class="player2name"></span> : <span class="score2">0</span> </p>
       </div>
     </div>
     <div id="board">

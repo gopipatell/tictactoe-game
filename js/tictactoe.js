@@ -19,26 +19,151 @@ const win = function(board) {
     return false;
   }
 };
-  // } else if(board[0] === board[3] === board[6]) {
-  //   console.log(2);
-  //   return board[0];
-  // } else if(board[1] === board[4] === board[7]) {
-  //   return board[1];
-  // } else if(board[2] === board[5] === board[8]) {
-  //   console.log(4);
-  //   return board[2];
-  // } else if(board[2] === board[4] === board[6]) {
-  //   console.log(5);
-  //   return board[2];
-  // } else if(board[0] === board[4] === board[8]) {
-  //   console.log(6);
-  //   return board[0];
-  // } else if(board[3] === board[4] === board[5]) {
-  //   console.log(7);
-  //   return board[3];
-  // } else if(board[6] === board[7] === board[8]) {
-  //   console.log(8);
-  //   return board[6];
-  // }
 
-//console.log(win([1,2,1,1,2,2,2,1,1]));
+//AI logic
+
+const aiMove = function() {
+  let move;
+
+  const p1 = function(val) {
+    return playerOneCombo.includes(val);
+  }
+
+  const p2 = function(val) {
+    return playerTwoCombo.includes(val);
+  }
+
+  const empty = function(val) {
+    return !p1(val) && !p2(val);
+  }
+
+  const winMove = function(a, b, c) {
+    let move;
+    if (p2(a) && p2(b) && empty(c))
+      move = c;
+    else if (p2(a) && p2(c) && empty(b))
+      move = b;
+    else if (p2(b) && p2(c) && empty(a))
+      move = a;
+    else
+      move = 0;
+
+    return move;
+  }
+
+  const blockMove = function(a, b, c) {
+    let move;
+    if (p1(a) && p1(b) && empty(c))
+      move = c;
+    else if (p1(a) && p1(c) && empty(b))
+      move = b;
+    else if (p1(b) && p1(c) && empty(a))
+      move = a;
+    else
+      move = 0;
+
+    return move;
+  }
+
+  // if two in row, then play for win
+
+  let temp;
+  if((temp = winMove("c1", "c2", "c3")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = winMove("c4", "c5", "c6")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = winMove("c7", "c8", "c9")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = winMove("c1", "c4", "c7")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = winMove("c2", "c5", "c8")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = winMove("c3", "c6", "c9")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = winMove("c1", "c5", "c9")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = winMove("c3", "c5", "c7")) && temp !== 0) {
+    move = temp;
+  }
+
+  // if two in row of opposite player, then block
+  else if((temp = blockMove("c1", "c2", "c3")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = blockMove("c4", "c5", "c6")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = blockMove("c7", "c8", "c9")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = blockMove("c1", "c4", "c7")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = blockMove("c2", "c5", "c8")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = blockMove("c3", "c6", "c9")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = blockMove("c1", "c5", "c9")) && temp !== 0) {
+    move = temp;
+  }
+  else if((temp = blockMove("c3", "c5", "c7")) && temp !== 0) {
+    move = temp;
+  }
+
+
+  // if center is available, then occupy
+  else if(empty("c5")) {
+    move = "c5";
+  }
+
+  // if opposite corner is available, then occupy
+  else if(p1("c1") && empty("c9")) {
+    move = "c9";
+  }
+  else if(p1("c3") && empty("c7")) {
+    move = "c7";
+  }
+  else if(p1("c7") && empty("c3")) {
+    move = "c3";
+  }
+  else if(p1("c9") && empty("c1")) {
+    move = "c1";
+  }
+  // if corner is avaiable, then occupy
+  else if(empty("c1")) {
+    move = "c1";
+  }
+  else if(empty("c3")) {
+    move = "c3";
+  }
+  else if(empty("c7")) {
+    move = "c7";
+  }
+  else if(empty("c9")) {
+    move = "c9";
+  }
+  // if middle square (side) is empty, then occupy
+  else if(empty("c2")) {
+    move = "c2";
+  }
+  else if(empty("c4")) {
+    move = "c4";
+  }
+  else if(empty("c6")) {
+    move = "c6";
+  }
+  else if(empty("c8")) {
+    move = "c8";
+  }
+
+  $(`td#${move}`).click();
+}
