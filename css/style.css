@@ -4,9 +4,7 @@ body {
   font-family: 'Maven Pro', sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
-  /* width:100%;
-  Height:100%; */
-}
+  }
 
 table td {
   border: 3px solid black;
@@ -98,6 +96,7 @@ button {
   padding-bottom: 10px;
   text-align: center;
   margin: 150px auto;
+  display: none;
 }
 
 #page2 {
@@ -110,7 +109,6 @@ button {
 
 input {
   font-size: 20px;
-  /* margin-top: 5px; */
   padding: 5px;
 }
 

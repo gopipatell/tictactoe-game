@@ -67,56 +67,57 @@ const aiMove = function() {
 
   // if two in row, then play for win
 
-  let temp;
-  if((temp = winMove("c1", "c2", "c3")) && temp !== 0) {
-    move = temp;
+  let possiblemove;
+  if((possiblemove = winMove("c1", "c2", "c3")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = winMove("c4", "c5", "c6")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = winMove("c4", "c5", "c6")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = winMove("c7", "c8", "c9")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = winMove("c7", "c8", "c9")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = winMove("c1", "c4", "c7")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = winMove("c1", "c4", "c7")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = winMove("c2", "c5", "c8")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = winMove("c2", "c5", "c8")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = winMove("c3", "c6", "c9")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = winMove("c3", "c6", "c9")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = winMove("c1", "c5", "c9")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = winMove("c1", "c5", "c9")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = winMove("c3", "c5", "c7")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = winMove("c3", "c5", "c7")) && possiblemove !== 0) {
+    move = possiblemove;
   }
 
   // if two in row of opposite player, then block
-  else if((temp = blockMove("c1", "c2", "c3")) && temp !== 0) {
-    move = temp;
+
+  else if((possiblemove = blockMove("c1", "c2", "c3")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = blockMove("c4", "c5", "c6")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = blockMove("c4", "c5", "c6")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = blockMove("c7", "c8", "c9")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = blockMove("c7", "c8", "c9")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = blockMove("c1", "c4", "c7")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = blockMove("c1", "c4", "c7")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = blockMove("c2", "c5", "c8")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = blockMove("c2", "c5", "c8")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = blockMove("c3", "c6", "c9")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = blockMove("c3", "c6", "c9")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = blockMove("c1", "c5", "c9")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = blockMove("c1", "c5", "c9")) && possiblemove !== 0) {
+    move = possiblemove;
   }
-  else if((temp = blockMove("c3", "c5", "c7")) && temp !== 0) {
-    move = temp;
+  else if((possiblemove = blockMove("c3", "c5", "c7")) && possiblemove !== 0) {
+    move = possiblemove;
   }
 
 
@@ -166,4 +167,4 @@ const aiMove = function() {
   }
 
   $(`td#${move}`).click();
-}
+};

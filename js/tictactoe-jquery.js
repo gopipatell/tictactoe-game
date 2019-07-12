@@ -118,7 +118,7 @@ $(document).ready(function() {
       }
 
       if(playingAgainstAI) {
-        setTimeout(aiMove, 400); 
+        setTimeout(aiMove, 400);
       }
     } else {
       $(this).text(symbols[1]);
@@ -169,7 +169,7 @@ $(document).ready(function() {
 
   $("#reset").on("click", reset);
 
-  showPage(1);
+  showPage(2);
 
 });
 
