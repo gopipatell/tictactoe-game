@@ -169,7 +169,7 @@ $(document).ready(function() {
 
   $("#reset").on("click", reset);
 
-  showPage(2);
+  showPage(1);
 
 });
 
